@@ -1,0 +1,45 @@
+.card {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.card:hover {
+  border: 0.5px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  color: #1e1e2f;
+}
+
+.card p {
+  margin: 0;
+  padding-bottom: 4px;
+  color: #9CA3AF;
+  font-size: 12px;
+}
+
+.created-by {
+  display: flex;
+  flex-direction: row;
+  --tw-text-opacity: 1;
+  color: rgb(191 219 254 / var(--tw-text-opacity));
+  font-size: 12px;
+  gap: 4px;
+}
+
+.market-cap {
+  color: #86EFAC !important;
+}
+
+.image {
+  width: 128px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 700;
+}
