@@ -15,9 +15,11 @@ const SearchBar = ({ searchTerm, handleSearch }) => {
         onChange={(e) => handleSearch(e.target.value)}
         className="search-input"
       />
-      <button onClick={handleClear} className="clear-button">
-        Clear
-      </button>
+      {searchTerm.length > 0 && (
+        <button onClick={handleClear} className="clear-button">
+          Clear
+        </button>
+      )}
       <button onClick={() => handleSearch(searchTerm)} className="search-button">
         Search
       </button>

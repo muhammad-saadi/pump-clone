@@ -1,28 +1,30 @@
-.card {
+.random-card {
   padding: 0.25rem;
   display: flex;
   flex-direction: row;
   gap: 8px;
+  width: fit-content;
 }
 
-.card:hover {
+.random-card:hover {
   border: 0.5px solid white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
+.random-card h2 {
   margin: 0 0 0.5rem;
   color: #1e1e2f;
 }
 
-.card p {
+.random-card p {
   margin: 0;
   padding-bottom: 4px;
-  color: #9CA3AF;
+  color: white;
   font-size: 12px;
+  text-align: start;
 }
 
-.created-by {
+.random-card-created-by {
   display: flex;
   flex-direction: row;
   --tw-text-opacity: 1;
@@ -31,15 +33,12 @@
   gap: 4px;
 }
 
-.market-cap {
-  color: #86EFAC !important;
+.random-card-image {
+  width: 5rem;
+  height: 5rem;
 }
 
-.image {
-  width: 128px;
-}
-
-.name {
+.random-card-name {
   font-size: 14px;
   font-weight: 700;
 }

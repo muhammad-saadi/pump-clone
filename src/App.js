@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import MainContent from './components/MainContent';
 import SearchBar from './components/SearchBar';
+import Header from './components/Header';
+import RandomCard from './components/RandomCard';
 import './App.css';
 
 const cardData = [
@@ -8,7 +10,7 @@ const cardData = [
     createdAt: "3 months ago",
     createdBy: "Hrcx3e4",
     replies: "20",
-    name: "goku",
+    name: "Goku",
     description: "This is a description of the post. It explains the content briefly.",
     marketCap: "$1M"
   },
@@ -16,7 +18,7 @@ const cardData = [
     createdAt: "2 months ago",
     createdBy: "UserXYZ",
     replies: "50",
-    name: "vejita",
+    name: "Vajeta",
     description: "This is another description of a post. Explains some different content.",
     marketCap: "$2M"
   },
@@ -24,7 +26,7 @@ const cardData = [
     createdAt: "1 month ago",
     createdBy: "User123",
     replies: "10",
-    name: "taklu",
+    name: "Taklu",
     description: "Brief description of this post goes here.",
     marketCap: "$500K"
   }
@@ -33,6 +35,7 @@ const cardData = [
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredData, setFilteredData] = useState(cardData);
+  const [randomCard, setRandomCard] = useState(cardData[0]);
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -46,10 +49,27 @@ function App() {
     }
   };
 
+  const getRandomCard = () => {
+    const randomIndex = Math.floor(Math.random() * filteredData.length);
+    setRandomCard(filteredData[randomIndex]);
+  };
+
+  useEffect(() => {
+    if (filteredData.length > 0) {
+      getRandomCard();
+    }
+  }, [filteredData]);
+
   return (
     <div className="app">
-      <header className="header">
-        <h1>Pump Board</h1>
+      <Header />
+      <header className="top-coin">
+        <img
+          src={`${process.env.PUBLIC_URL}/king-of-the-hill.png`}
+          className="king-hill-image"
+          alt="King of the Hill"
+        />
+        {randomCard && <RandomCard {...randomCard} />}
       </header>
       <main className="main">
         <SearchBar searchTerm={searchTerm} handleSearch={handleSearch} />

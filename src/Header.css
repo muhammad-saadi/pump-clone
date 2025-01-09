@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info {
+  text-align: left;
+}
+
+.info a {
+  margin-inline-end: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.2rem;
+}
+
+.main-logo {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.header-logo {
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+}

@@ -12,9 +12,10 @@ body {
   min-height: 100vh;
 }
 
-.header {
+.top-coin {
   color: white;
   text-align: center;
+  align-self: center;
   padding: 1rem;
 }
 
@@ -26,6 +27,11 @@ body {
 .main-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.king-hill-image {
+  width: 166px;
+  height: 32px;
 }
 
 .footer {
